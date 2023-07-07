@@ -1,14 +1,9 @@
-const density = "Ñ@#W$?!;:+=-,._ ";
-const colors = [
-  "#6527BE",
-  "#9681EB",
-  "#45CFDD",
-  "#7d9ddf",
-  "#A7EDE7",
-  "#FFFFFF",
-];
-const inc = 0.1;
-const scl = 20;
+//const density = "Ñ@#W$9876543210?!abc;:+=-,._ ";
+const density = "@$#*!=;:~-,.";
+//const density = "/\\MXYZabc!?=-. ";
+//const density = "#WX?*:÷×+=-· ";
+const inc = 0.08;
+const scl = 15;
 
 let cols, rows;
 
@@ -31,9 +26,9 @@ function draw() {
   for (var y = 0; y < rows; y++) {
     let xoff = 0;
     for (var x = 0; x < cols; x++) {
-      let r = map(noise(xoff, yoff, zoff), 0, 1, 0, 255);
+      let r = map(noise(xoff, yoff, zoff), 0.2, 1, 0, 255);
 
-      const len = density.length;
+      const len = density.length - 1;
       const charIndex = floor(map(r, 0, 255, len, 0));
 
       noStroke();
