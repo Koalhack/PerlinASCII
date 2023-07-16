@@ -1,9 +1,16 @@
 body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100vh;
+
   background: #061434;
   position: relative;
 
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   overflow: hidden;
 }
@@ -21,4 +28,8 @@ body::before {
       rgba(0, 0, 255, 0.06)
     );
   background-size: 100% 2px, 3px 100%;
+}
+
+canvas {
+  display: block;
 }

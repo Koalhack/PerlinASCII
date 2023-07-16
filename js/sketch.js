@@ -9,14 +9,14 @@ let cols, rows;
 
 let zoff = 0;
 
-function setup() {
-  createCanvas(
-    document.documentElement.scrollWidth,
-    document.documentElement.scrollHeight
-  );
+const screenWidth = document.documentElement.scrollWidth;
+const screenHeight = document.documentElement.scrollHeight;
 
-  cols = floor(width / scl);
-  rows = floor(height / scl);
+function setup() {
+  cols = floor(screenWidth / scl);
+  rows = floor(screenHeight / scl);
+
+  createCanvas(cols * scl, rows * scl);
 }
 
 function draw() {
